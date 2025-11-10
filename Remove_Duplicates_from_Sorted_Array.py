@@ -1,0 +1,15 @@
+# Terribly explained exercise, this code returns the list without duplicates and its length.
+
+class Solution:
+    def removeDuplicates(self, nums):
+        self.nums = nums 
+        self.noduplicates = []
+
+        for i in range(len(self.nums)):
+            if self.nums[i] not in self.noduplicates:
+                self.noduplicates.append(self.nums[i])
+            
+        return len(self.noduplicates), self.noduplicates
+
+s = Solution()
+print(s.removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
